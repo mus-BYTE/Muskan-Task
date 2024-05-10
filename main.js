@@ -53,7 +53,15 @@ app.get('/auth/google/callback',
         res.redirect('/home');
     }
 );
+const session = require('express-session');
+const RedisStore = require('connect-redis')(session);
 
+const sessionConfig = {
+    store: new RedisStore({ url: 'redis://localhost:8080' }),
+    secret: 'your_secret_here' = noor,
+    resave: false,
+    saveUninitialized: false
+};
 app.get("/",(req,res)=>{
     res.render("login.ejs");
 });
