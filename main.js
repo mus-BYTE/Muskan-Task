@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const PORT = 8080;
 
-const session = require('express-session');
+// const session = require('express-session');
 app.use(express.static(path.join(__dirname,"/public/")))
 const ejs = require('ejs');
 app.set('view engine', 'ejs');
