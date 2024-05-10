@@ -92,7 +92,7 @@ app.set('views', __dirname + '/views');
 
 // Session configuration using Redis
 const sessionConfig = {
-    store: new RedisStore({ url: 'redis://localhost:6379' }),
+    store: new RedisStore({ url: 'redis://localhost:8080' }),
     secret: 'your_secret_here',
     resave: false,
     saveUninitialized: false
